@@ -1,0 +1,13 @@
+<!--pages/mine/mine.wxml-->
+<view class="container">
+	<view class="avatar_box">
+		<button wx:if="{{avatar==false}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" type="primary" style="margin-top:50rpx;">点击登录</button>
+		<image class="avatar" src="{{avatar}}" wx:if="{{avatar}}"></image>
+		<view></view>
+	</view>
+	<view class="info_list">
+		<view wx:if="{{nikename}}">昵称：{{nikename}}</view>
+		<view>关于</view>
+		<view>意见反馈</view>
+	</view>
+</view>

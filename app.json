@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/mine/mine",
+    "pages/cata/cata"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#56abbe",
+    "navigationBarTitleText": "账单管家",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#56abbe",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/home_gray.png",
+        "selectedIconPath": "images/home.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/mine_gray.png",
+        "selectedIconPath": "images/mine.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

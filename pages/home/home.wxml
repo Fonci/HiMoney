@@ -1,0 +1,54 @@
+<view class="container">
+	<view class="bg">
+		<view class="month_bill">
+			<view bindtap="showMonth">
+				<view style="font-size: 46rpx;font-weight:bold;margin-bottom:20rpx;">{{year}}年</view>
+				<view>{{month}}月▼</view>
+			</view>
+			<view>
+				<view style="font-size: 46rpx;font-weight:bold;margin-bottom:20rpx;">支出</view>
+				<view>{{total}}元</view>
+			</view>
+		</view>
+	</view>
+	<navigator url="/pages/cata/cata">
+		<button type="primary" style="margin:20rpx auto;width:80%;">记一笔</button>
+	</navigator>
+	<!-- 支出详细列表 -->
+	<view class="bill_list">
+		<block>
+			<van-cell title="08月17日 星期一" value="支出：40.00" size="large" />
+			<van-cell-group>
+				<van-cell title="早餐" value="-10.00" icon="paid" />
+				<van-cell title="网购" value="-10.00" icon="setting-o" />
+				<van-cell title="饮料" label="我是一条备注信息" value="-20.00">
+					<view slot="icon">
+						<image class="cata_logo" src="../../images/home.png"></image>
+					</view>
+				</van-cell>
+			</van-cell-group>
+			<!-- <view class='list_time'>08月17日 星期一</view>
+			<view class="list_content">
+				<view class="cata">
+					<image class="cata_logo" src="../../images/home.png"></image>
+					餐饮
+				</view>
+				<text >-10.00</text>
+			</view>
+			<view class="list_content">
+				<view class="cata">
+					<image class="cata_logo" src="../../images/home.png"></image>
+					一日三餐
+				</view>
+				<text >-10.00</text>
+			</view> -->
+		</block>
+
+
+
+	</view>
+	<!-- 年月弹出框 -->
+	<van-popup show="{{ popMonth }}" position="bottom" custom-style="height:40%">
+		<van-datetime-picker type="year-month" value="{{ currentDate }}" min-date="{{ minDate }}" visible-item-count='4' bind:confirm="confirmPop" bind:cancel='closePop' />
+	</van-popup>
+</view>
