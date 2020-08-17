@@ -1,0 +1,5 @@
+/* pages/note/note.wxss */
+.container {
+  width: 100%;
+  height: auto;
+}

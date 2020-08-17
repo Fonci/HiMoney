@@ -1,0 +1,15 @@
+<!--pages/note/note.wxml-->
+<view class="container">
+	<van-cell-group>
+		<van-field value="{{ username }}" required clearable label="金额" placeholder="请输入金额" />
+		<van-field value="{{ password }}" label="分类" placeholder="请选择分类" required />
+		<van-field value="{{ showDate }}" required clearable label="日期" placeholder="请选择日期" bind:focus='checkDate' />
+	</van-cell-group>
+	<button type="primary" style="width:80%;margin-top:30rpx;">保存</button>
+
+
+	<!-- 年月日弹出框 -->
+	<van-popup show="{{ popDate }}" position="bottom" custom-style="height:40%">
+		<van-datetime-picker type="date" value="{{ currentDate }}" min-date="{{ minDate }}" visible-item-count='4' bind:confirm="confirmPop" bind:cancel='closePop' />
+	</van-popup>
+</view>

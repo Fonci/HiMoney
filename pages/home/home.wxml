@@ -11,7 +11,7 @@
 			</view>
 		</view>
 	</view>
-	<navigator url="/pages/cata/cata">
+	<navigator url="/pages/note/note">
 		<button type="primary" style="margin:20rpx auto;width:80%;">记一笔</button>
 	</navigator>
 	<!-- 支出详细列表 -->

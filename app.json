@@ -2,6 +2,8 @@
   "pages": [
     "pages/home/home",
     "pages/mine/mine",
+    "pages/note/note",
+    "pages/chart/chart",
     "pages/cata/cata"
   ],
   "window": {
@@ -18,6 +20,12 @@
         "text": "首页",
         "iconPath": "images/home_gray.png",
         "selectedIconPath": "images/home.png"
+      },
+      {
+        "pagePath": "pages/chart/chart",
+        "text": "图表",
+        "iconPath": "images/chart_gray.png",
+        "selectedIconPath": "images/chart.png"
       },
       {
         "pagePath": "pages/mine/mine",

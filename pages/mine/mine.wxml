@@ -1,7 +1,7 @@
 <!--pages/mine/mine.wxml-->
 <view class="container">
 	<view class="avatar_box">
-		<button wx:if="{{avatar==false}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" type="primary" style="margin-top:50rpx;">点击登录</button>
+		<button wx:if="{{avatar==false}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" type="primary" style="margin-top:50rpx;" size="mini">点击登录</button>
 		<image class="avatar" src="{{avatar}}" wx:if="{{avatar}}"></image>
 		<view></view>
 	</view>
