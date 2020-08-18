@@ -49,6 +49,6 @@
 	</view>
 	<!-- 年月弹出框 -->
 	<van-popup show="{{ popMonth }}" position="bottom" custom-style="height:40%">
-		<van-datetime-picker type="year-month" value="{{ currentDate }}" min-date="{{ minDate }}" visible-item-count='4' bind:confirm="confirmPop" bind:cancel='closePop' />
+		<van-datetime-picker type="year-month" value="{{ currentDate }}" max-date="{{ maxDate }}" visible-item-count='4' bind:confirm="confirmPop" bind:cancel='closePop' />
 	</van-popup>
 </view>

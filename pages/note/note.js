@@ -5,14 +5,16 @@ Page({
    * 页面的初始数据
    */
   data: {
-    showDate: '',//选择年月日
+    money: '',
+    cata: '',
     popDate: false,
-    year: '',
-    month: '',
-    date: '',
+    showDate: '',//选择年月日
     detailTime: '',//具体花费时间
+    mark: '',//备注信息
+    maxDate: new Date().getTime(),
+    currentDate: new Date().getTime(),
 
-
+   
   },
 
   /**
@@ -32,12 +34,13 @@ Page({
     })
   },
   confirmPop(val) {
-    console.log(new Date(val.detail))
+    let year = new Date(val.detail).getFullYear();//年
+    let month = new Date(val.detail).getMonth() + 1 < 10 ? '0' + (new Date(val.detail).getMonth() + 1) : new Date(val.detail).getMonth() + 1;//月
+    let date = new Date(val.detail).getDate() < 10 ? '0' + new Date(val.detail).getDate() : new Date(val.detail).getDate();//日
     this.setData({
       popDate: false,
-      year: new Date(val.detail).getFullYear(),//年
-      month: new Date(val.detail).getMonth() + 1 < 10 ? '0' + (new Date(val.detail).getMonth() + 1) : new Date(val.detail).getMonth() + 1,//月
-      popMonth: false
+      popMonth: false,
+      showDate: year + '-' + month + '-' + date
     })
   },
   /**

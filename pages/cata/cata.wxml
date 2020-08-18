@@ -1,2 +1,16 @@
 <!--pages/cata/cata.wxml-->
-<text>pages/cata/cata.wxml</text>
+<view class="container">
+	<block wx:for='{{cataData}}' wx:for-item='item' wx:for-index='index' wx:key='index'>
+		<view class="first_title">{{item.first}}</view>
+		<van-grid column-num="5" gutter="{{ 5 }}" border='{{false}}'>
+			<navigator url="/pages/note/note">
+				<van-grid-item use-slot wx:for='{{item.children}}' wx:for-item='child' wx:for-index='index' wx:key='index' bind:click='clickCata' data-second='{{child.second}}'>
+					<image class="cata_icon" src="{{child.iconUrl}}"></image>
+					<view class="second_title">{{child.second}}</view>
+				</van-grid-item>
+			</navigator>
+
+		</van-grid>
+	</block>
+
+</view>

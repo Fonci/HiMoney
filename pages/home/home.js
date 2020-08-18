@@ -8,7 +8,7 @@ Page({
     total: '1000.00',//总支出
     popMonth: false,//年月弹出框是否显示
     currentDate: new Date().getTime(),
-    minDate: new Date().getTime(),
+    maxDate: new Date().getTime(),
     year: new Date().getFullYear(),
     month: new Date().getMonth() + 1 < 10 ? '0' + (new Date().getMonth() + 1) : new Date().getMonth() + 1
 
