@@ -67,8 +67,8 @@
 			"list": [
 				{
 					"id": 0,
-					"name": "pages/cata/cata",
-					"pathName": "pages/cata/cata",
+					"name": "pages/note/note",
+					"pathName": "pages/note/note",
 					"query": "",
 					"scene": null
 				}

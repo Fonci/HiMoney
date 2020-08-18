@@ -3,8 +3,7 @@
     "pages/home/home",
     "pages/mine/mine",
     "pages/note/note",
-    "pages/chart/chart",
-    "pages/cata/cata"
+    "pages/chart/chart"
   ],
   "window": {
     "backgroundTextStyle": "light",
