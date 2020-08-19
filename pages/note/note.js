@@ -1,4 +1,6 @@
 // pages/note/note.js
+import Toast from '@vant/weapp/toast/toast';
+
 Page({
   /**
    * 页面的初始数据
@@ -217,8 +219,6 @@ Page({
 
   // 获取金额
   getMoney(e) {
-
-
     if (e.detail.value) {
       this.setData({
         money: e.detail.value,
@@ -241,6 +241,16 @@ Page({
   },
   // 保存
   takeNote() {
+    // 金额正则
+    var reg = /(^[1-9]([0-9]+)?(\.[0-9]{1,2})?$)|(^(0){1}$)|(^[0-9]\.[0-9]([0-9])?$)/;
+    if (this.data.money == "" || this.data.cata == "" || this.data.showDate == "") {
+      Toast('必填项不能为空');
+      return;
+    } else
+      if (!reg.test(this.data.money)) {
+        Toast('请输入金额的正确格式');
+        return;
+      }
     let noteInfo = {};
     noteInfo = {
       money: this.data.money,
@@ -248,7 +258,10 @@ Page({
       showDate: this.data.showDate,
       mark: this.data.mark
     }
-    console.log(noteInfo)
+    wx.setStorageSync('noteInfo', noteInfo)
+    wx.switchTab({
+      url: '/pages/home/home'
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

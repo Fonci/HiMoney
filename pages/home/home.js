@@ -11,7 +11,8 @@ Page({
     maxDate: new Date().getTime(),
     year: new Date().getFullYear(),
     month: new Date().getMonth() + 1 < 10 ? '0' + (new Date().getMonth() + 1) : new Date().getMonth() + 1
-
+    ,
+    showNote: []
   },
   // 显示年月弹出框
   showMonth() {
@@ -36,6 +37,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    if (wx.getStorageSync('noteInfo')) {
+      this.setData({
+        showNote: showNote.push(wx.getStorageSync('noteInfo'))
+      })
+    }
 
   },
 

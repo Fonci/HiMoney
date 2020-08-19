@@ -2,16 +2,11 @@
 
 <view class="container">
 	<!-- 输入金额必须为数字  可保留两位小数-->
-
-
+	<van-toast id="van-toast" />
 	<view class="row_box">
 		<label>金额：</label>
 		<input class="content" placeholder="请输入金额" value="{{money}}" placeholder-style="color:#ccc;" bindblur="getMoney"></input>
 	</view>
-	<view wx:if='{{moneyFormatter}}'>
-		<van-notice-bar color="#1989fa" background="#ecf9ff" left-icon="info-o" text="请输入金额的正确格式" />
-	</view>
-
 	<view class="row_box" bindtap="checkCata">
 		<label>分类：</label>
 		<text class="content" >{{cata}}</text>
